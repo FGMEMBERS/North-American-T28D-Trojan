@@ -5,6 +5,10 @@
   <path>apibullet-tracer.ac</path>
 
   <animation>
+    <object-name>trace</object-name>
+  </animation>
+
+  <animation>
     <type>dist-scale</type>
     <name>30mm</name>
     <object-name>trace</object-name>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>North American T28D Trojan</title>
+  <key>
+    <name>d</name>
+    <desc>Open/Close canpy</desc>
+  </key>
+  <key>
+    <name>e</name>
+    <desc>Guns fire</desc>
+  </key>
+  <key>
+    <name>E</name>
+    <desc>Open/Close wings</desc>
+  </key>
+  <key>
+    <name>o/O</name>
+    <desc>Hook up/down</desc>
+  </key>
+
+</PropertyList>

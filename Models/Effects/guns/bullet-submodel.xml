@@ -5,7 +5,7 @@
 
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/North-American-T28D-Trojan/Models/Effects/guns/explosion.xml</model>
+    <model>Aircraft/North-American-T28D-Trojan/Models/Effects/guns/flack.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>

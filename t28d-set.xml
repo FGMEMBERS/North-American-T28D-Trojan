@@ -8,7 +8,7 @@
     <author>Emmanuel BARANGER (3D/FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>t28d-yasim</aero>
-    
+
     <rating>
       <FDM type="int">     2 </FDM>
       <systems type="int"> 1 </systems>
