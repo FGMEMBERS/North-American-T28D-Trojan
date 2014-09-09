@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>interior.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>planchet</object-name>
+    <object-name>fond</object-name>
+    <object-name>intverriereA</object-name>
+    <object-name>intverriereB</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+    <object-name>intvitreverriereA</object-name>
+    <object-name>intvitreverriereB</object-name>
+  </animation>
+    
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/North-American-T28D-Trojan/Models/Effects/glass</inherits-from>
+    <object-name>intvitres</object-name>
+    <object-name>intvitreverriereA</object-name>
+    <object-name>intvitreverriereB</object-name>
+  </effect>
+  
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.09465 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.57407 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord pilote -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -2.40219 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.63880 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -0.83465 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.57407 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tableau de bord  copilote -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Interior/Panel/panel2.xml</path>
+    <offsets>
+      <x-m> -1.07298 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.63880 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left side -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Interior/Panel/Left-side/left.xml</path>
+    <offsets>
+      <x-m> -1.31566 </x-m>
+      <y-m> -0.25992 </y-m>
+      <z-m>  0.17867 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Right side -->
+  <model>
+    <path>Aircraft/North-American-T28D-Trojan/Models/Interior/Panel/Right-side/right.xml</path>
+    <offsets>
+      <x-m> -1.31566 </x-m>
+      <y-m>  0.25992 </y-m>
+      <z-m>  0.17867 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Canopy -->
+  <animation>
+    <name>IntCanopyA</name>
+    <object-name>intverriereA</object-name>
+    <object-name>intvitreverriereA</object-name>
+  </animation>
+
+  <animation>
+    <name>IntCanopyB</name>
+    <object-name>intverriereB</object-name>
+    <object-name>intvitreverriereB</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntCanopyA</object-name>
+    <object-name>IntCanopyB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>IntCanopyA</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> 0.7 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>IntCanopyB</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> 1.4 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/views.xml">
+
+    <description>North American T28D Trojan (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <status>devel</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/North-American-T28D-Trojan/Sounds/t28d-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/North-American-T28D-Trojan/Models/t28d.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/North-American-T28D-Trojan/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
+    <startup>
+      <splash-texture>Aircraft/North-American-T28D-Trojan/t28d-splash.png</splash-texture>
+    </startup>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"> 0 </int>                     <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/engines/engine[0]/rpm"/>
+        <float n="5" alias="/engines/engine[0]/cranking"/>
+        <float n="6" alias="/gear/gear[0]/wow/"/>
+        <float n="7" alias="/gear/gear[1]/wow/"/>
+        <float n="8" alias="/gear/gear[2]/wow/"/>
+        <float n="9" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="10" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="11" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+
+    <help include="Systems/help.xml"/>
+
+    <menubar include="Dialogs/t28d-menu.xml"/>
+
+  </sim>
+
+  <surface-positions>
+    <wing-fold-pos-norm alias="/instrumentation/doors/wings/position-norm" />
+  </surface-positions>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <tank-num type="int">0</tank-num>
+        <level-gal_us archive="y">2070</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <input>
+    <keyboard include="Systems/t28d-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/North-American-T28D-Trojan/Nasal/doors.nas</file>
+    </doors>
+    <t28d>
+      <file>Aircraft/North-American-T28D-Trojan/Nasal/liveries.nas</file>
+      <file>Aircraft/North-American-T28D-Trojan/Nasal/light.nas</file>
+    </t28d>
+    <guns>
+      <file>Aircraft/North-American-T28D-Trojan/Nasal/weapons.nas</file>
+      <file>Aircraft/North-American-T28D-Trojan/Nasal/revi.nas</file>
+    </guns>
+  </nasal>
+
+</PropertyList>
